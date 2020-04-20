@@ -1,11 +1,10 @@
 <script>
   export let name;
+  import Header from './Header.svelte'
 </script>
 
 <style>
-  h1 {
-    color: dodgerblue;
-  }
+
 </style>
 
 <svelte:head>
@@ -13,5 +12,5 @@
 </svelte:head>
 
 <main>
-  <h1>Hello {name}!</h1>
+  <Header hero={true} {name} />
 </main>
