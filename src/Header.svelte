@@ -1,6 +1,7 @@
 <script>
   export let name;
   export let hero;
+  import Clock from './Clock.svelte';
 </script>
 
 <style>
@@ -23,4 +24,5 @@
 
 <header>
   <h1 class:hero>Hello {name}!</h1>
+  <Clock />
 </header>
