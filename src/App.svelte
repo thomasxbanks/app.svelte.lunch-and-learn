@@ -2,6 +2,10 @@
   export let name;
   import Header from './Header.svelte'
   import Image from './Image.svelte'
+  import Gallery from './Gallery.svelte'
+
+  import images from './data.js'
+
 </script>
 
 <style>
@@ -22,7 +26,8 @@
 </svelte:head>
 
 <Header hero={true} {name} />
-<Image src="http://placekitten.com/1920/768" alt="A lovely kitten" />
+<Image hero={true} src="http://placekitten.com/1920/768" alt="A lovely kitten" />
 <main>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias officiis, ipsam voluptatem porro reprehenderit quasi cum maxime natus! Ipsum rerum modi ullam, magnam a placeat aperiam excepturi iure iusto repellendus?</p>
+  <Gallery {images} />
 </main>

@@ -1,10 +1,34 @@
 <script>
   export let src;
   export let alt;
+  export let caption = false;
+  export let hero = false;
 </script>
 
-<style></style>
+<style>
+  figure {
+    width: 100%;
+    height: auto;
+  }
 
-<figure>
+  figure:not(.hero) {
+    width: 33.33%;
+    padding: 0.5rem;
+  }
+
+  figure.hero img {
+    object-fit: cover;
+  }
+
+  figcaption {
+    font-size: 0.8em;
+    color: dimgray;
+  }
+</style>
+
+<figure class:hero>
   <img src={src} alt={alt}>
+  {#if caption}
+    <figcaption>{caption}</figcaption>
+  {/if}
 </figure>
