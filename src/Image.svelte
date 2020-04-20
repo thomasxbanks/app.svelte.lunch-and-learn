@@ -12,7 +12,7 @@
   }
 
   figure:not(.hero) {
-    width: 33.33%;
+    width: calc(33.33% - 1rem);
     padding: 0.5rem;
   }
 
